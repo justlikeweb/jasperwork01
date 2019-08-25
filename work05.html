@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="jquery.mousewheel.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <script src="js/vegas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amethysta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nav.css">
+    <title>jasper's web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            font-family: "微軟正黑體";
+            box-sizing: border-box;
+        }
+
+        /* ------------ */
+        .back_img a img {
+            height: 20px;
+            margin-bottom: 100px;
+            margin-top: 50px;
+        }
+
+        /* ------------width&height------------------- */
+        .wid {
+            display: none;
+        }
+
+        .hei {
+            display: none;
+        }
+
+        /* ------------參數區------------------------ */
+
+
+
+        .d-flex {
+            display: flex;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+
+
+        /* ----------work------------ */
+        .container {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        .container>.ctrl-h1 {
+            letter-spacing: 3px;
+            margin-bottom: 100px;
+        }
+
+        /* .container>.ctrl_width_p{
+          margin: 0 auto;
+            max-width: 910px;
+            letter-spacing: 2px;
+            height: 100px;
+            line-height: 30px;
+        } */
+        .container img {
+            max-width: 100%;
+        }
+
+
+
+
+        /* -------------footer------------------------------ */
+        footer .line {
+            margin: 0 auto;
+            width: 100%;
+            height: 1px;
+            background: rgb(163, 163, 163);
+            /* margin-bottom: 50px; */
+        }
+
+        .footer_ul {
+            height: 100px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer_ul p {
+            letter-spacing: 3px;
+            font-size: .6rem;
+            margin: 0;
+        }
+
+        .footer_ul ul li img {
+            height: 25px;
+            margin: 0 15px;
+        }
+
+        .buttom_text {
+            margin: 20px 0;
+
+        }
+
+        .buttom_text li {
+            margin: 0 10px;
+
+        }
+
+        .buttom_text li a {
+            text-decoration: none;
+            color: #000;
+
+        }
+
+        @media screen and (max-width:380px) {
+            .footer_ul .buttom_text {
+                max-width: 280px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+
+        /* ------------------------------------------ */
+        .go-top {
+            position: fixed;
+            bottom: 2em;
+            right: 0.5em;
+            text-decoration: none;
+            /* color: white; */
+            /* background-color: rgba(0, 0, 0, 0.3); */
+            font-size: 12px;
+            padding: 1em;
+            display: none;
+
+        }
+
+        .go-top img {
+            height: 35px;
+            transform: rotate(-90deg);
+        }
+
+        /* -------------------------------------------------------- */
+    </style>
+</head>
+
+<body>
+
+    <!-- -------------------nav--------------------------------    -->
+    <nav>
+        <div class="d-flex  container ">
+            <div>
+                <a href="index.html"> <img class="img" src="images/jd-logo.svg" alt=""></a>
+            </div>
+            <ul id="nav_ul_1" class="d-flex ctul">
+                <li class="show_desktop_nav"><a href="index.html">HOME</a></li>
+                <li class="show_desktop_nav"><a href="portoflio.html">PORTFOLIO</a></li>
+                <li class="show_desktop_nav"><a href="contact.html">CONTACT</a></li>
+
+                <li class=" show_mobile_nav">
+                    <div class=" nav_mobile">
+                        <div class="cttlm">
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu show_mobile_nav">
+            <div class="menu_size">
+                <ul class="transition">
+                    <li><a class="transition" href="index.html">HOME</a></li>
+                    <li><a class="transition" href="portoflio.html">PORTFOLIO</a></li>
+                    <li><a class="transition" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ----------------------------------------------- -->
+
+
+    <!-- ------------bg01--------------- -->
+
+    <div class="container">
+        <h1 class="ctrl-h1">Mobile UI/UX</h1>
+
+        <img src="images/work05.jpg" alt="">
+       
+            <div class="back_img">
+                    <a href="portoflio.html">
+                <img src="images/menu02.svg" alt="">
+            </a>
+            </div>
+      
+
+    </div>
+
+
+
+    <footer>
+
+        <div class="line"></div>
+        <div class="footer_ul container d-flex">
+
+            <ul class="d-flex">
+                <li class="nav_pic"><a href=""><img src="images/facebook.svg" alt=""></a></li>
+                <li class="nav_pic "><a href=""><img src="images/instagram.svg" alt=""></a></li>
+                <li class="nav_pic "><a href=""><img src="images/pinteres.svg" alt=""></a></li>
+
+            </ul>
+            <ul class="d-flex buttom_text">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portoflio.html">PORTOFLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <p>© 2019 JD.All Rights Reserved. </p>
+        </div>
+
+        <a href="#" class="go-top"><img src="images/next-page-66.svg" alt=""></a>
+    </footer>
+
+
+
+
+
+
+
+    <script>
+        // -------------------------------------
+
+        $(function () {
+            $('.pit').vegas({
+                slides: [
+                    { src: 'images/pt002.jpg' },
+                    { src: 'images/pt05.jpg' },
+                    { src: 'images/pt03.jpg' },
+                    { src: 'images/pt06.jpg' },
+
+                ],
+                animation: ['kenburnsDown', 'kenburnsDownRight', 'kenburnsUp', 'kenburnsDownLeft',],
+                timer: false,
+                transition: 'fade',
+                delay: 7000,
+                transitionDuration: 2000,
+                shuffle: true,
+            });
+        });
+
+
+        // ------------menu------------------
+        $(".cttlm").click(function () {
+            $(this).toggleClass('active');
+            $(".menu_size").toggleClass('active');
+        });
+    
+
+        // -----------------
+        $(document).ready(function () {
+            // Show or hide the sticky footer button
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $('.go-top').fadeIn(200);
+                } else {
+                    $('.go-top').fadeOut(200);
+                }
+            });
+
+            // Animate the scroll to top
+            $('.go-top').click(function (event) {
+                event.preventDefault();
+
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            })
+        });
+        $(document).ready(function () {
+            $(window).resize(function () {
+                var width = $(window).width();
+                $("#width").text(width);
+                console.log(width);
+                var height = $(window).height();
+                $("#height").text(height);
+                console.log(height);
+            })
+        });
+
+
+
+// ------------
+
+
+
+
+
+
+
+// --------------------
+    </script>
+
+
+</body>
+
+</html>

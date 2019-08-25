@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="jquery.mousewheel.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <script src="js/vegas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amethysta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nav.css">
+
+    <title>jasper's web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            font-family: "微軟正黑體";
+            box-sizing: border-box;
+        }
+
+
+        /* ------------width&height------------------- */
+        .wid {
+            display: none;
+        }
+
+        .hei {
+            display: none;
+        }
+
+        /* ------------參數區------------------------ */
+
+
+
+        .d-flex {
+            display: flex;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .pit {
+            margin-top: 150px;
+            height: 650px;
+            border: 1px solid rgb(211, 211, 211);
+
+        }
+
+        .margin01 {
+            margin-top: -50px;
+            box-sizing: border-box;
+        }
+
+        /* .bg_mar .bg_mar_p {
+            min-width: 100px;
+        } */
+
+        .bg_mar_p {
+            text-align: center;
+            font-size: 0.8rem;
+            letter-spacing: 8px;
+            margin: 0;
+            font-family: 'Amethysta', serif;
+            text-align: center;
+
+            line-height: 80px;
+            position: relative;
+        }
+
+        .bg_mar_p a {
+            text-decoration: none;
+            color: rgb(119, 119, 119);
+        }
+
+        .margin01_box {
+            width: calc(100% / 3);
+            height: 80px;
+            /* flex-direction: column; */
+        }
+
+        .bg_mar {
+            border-left: 1px solid rgba(0, 0, 0, .3);
+            border-right: 1px solid rgba(0, 0, 0, .3);
+        }
+
+        .margin01_p {
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            margin-bottom: 1px;
+            margin-top: 8px;
+            color: rgb(126, 126, 126);
+        }
+
+        .margin01 .d-flex {
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width:1024px) {
+            .margin01 {
+                margin: -60px 10px 0 10px;
+
+            }
+
+        }
+
+        @media screen and (max-width:720px) {
+            .margin01 .d-flex {
+                justify-content: center;
+                margin-top: 40px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bg_mar {
+                border-left: 0;
+                border-right: 0;
+                border-top: 1px solid rgba(0, 0, 0, .3);
+                border-bottom: 1px solid rgba(0, 0, 0, .3);
+            }
+
+            .margin01_box {
+                width: 100%;
+                height: 80px;
+
+            }
+        }
+
+
+        /* ------------#02----------------- */
+        .bg02_text {
+            margin: 0 30px;
+            margin-top: 70px;
+        }
+
+        .bg02 {
+            margin-top: 170px;
+            margin-bottom: 50px;
+        }
+
+
+        h1.size_h1 {
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+        }
+
+        .text_p {
+            height: 100px;
+            line-height: 33px;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
+            color: rgb(105, 105, 105);
+        }
+
+        .text_p span {
+            font-weight: 900;
+            font-size: 1rem;
+            color: rgb(36, 36, 36);
+        }
+
+        .pic_text {
+            max-width: 1400px;
+        }
+
+        .pic_text img {
+            width: 100%;
+        }
+
+
+
+        /* ------------------------------ */
+        @media screen and (max-width:1024px) {
+            .bg02 {
+                margin-bottom: 250px;
+            }
+
+            .bg02 .d-flex {
+                flex-direction: column-reverse;
+                margin-top: -130px;
+
+            }
+
+            .bg02_text {
+                margin: 0 45px;
+            }
+
+        }
+
+        @media screen and (max-width:500px) {
+            .bg02 {
+                margin-bottom: 250px;
+                margin-top: 50px;
+            }
+
+
+
+        }
+
+        /* ----------02title---------------- */
+        .bg02 p.text_center1 {
+            text-align: center;
+            /* padding-left: 10px; */
+        }
+
+        .text_center1 {
+
+            position: relative;
+            letter-spacing: 8px;
+            font-family: 'Amethysta', serif;
+            /* margin-top: -250px; */
+            margin-bottom: 100px;
+        }
+
+        .text_center1::after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 1px;
+            background: #000;
+            bottom: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media screen and (max-width:1024px) {
+            .text_center1 {
+                margin-bottom: 200px;
+            }
+        }
+
+        /* --------------03-----------------        */
+        .text_center2 {
+            position: relative;
+            text-align: center;
+            letter-spacing: 8px;
+            font-family: 'Amethysta', serif;
+            margin-top: 150px;
+            margin-bottom: 100px;
+        }
+
+        .text_center2::before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 1px;
+            background: #000;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* ------------------------------ */
+
+        .bg03 .d-flex {
+            justify-content: center;
+
+        }
+
+        .bg03 .show_on_desk figure {
+            width: 500px;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .bg03 .show_on_desk figure img {
+            width: 100%;
+        }
+
+        .bg03 .show_on_desk figure:nth-child(2) {
+            width: 700px;
+            height: auto;
+            overflow: hidden;
+            /* margin: 0 100px; */
+            margin-top: 150px;
+        }
+
+        .bg03 .show_on_desk figure:nth-child(2) img {
+            width: 100%;
+
+        }
+
+        .bg03_text {
+            display: block;
+            margin: 30px 0 0 20px;
+            font-size: 1.5rem;
+            /* letter-spacing: 5px; */
+            font-family: 'Amethysta', serif;
+            color: rgb(80, 80, 80);
+        }
+
+        .bg03_text1 {
+            display: block;
+            margin: 5px 0 0 20px;
+            font-size: .8rem;
+            letter-spacing: 2px;
+            font-family: 'Amethysta', serif;
+            color: rgb(177, 177, 177);
+        }
+
+        .bg03 figure a {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width:720px) {
+            .show_on_desk {
+                display: none !important;
+            }
+
+        }
+
+
+        /* ----------mobile------------- */
+        .bg03 .show_on_mobile {
+            text-align: center;
+        }
+
+        .bg03 .show_on_mobile figure {
+            text-align: center;
+            max-width: 900px;
+            overflow: hidden;
+        }
+
+        .mobile_img {
+            width: 100%;
+        }
+
+        .bg03 .show_on_mobile a {
+            text-decoration: none;
+            color: rgb(177, 177, 177);
+        }
+
+        @media screen and (max-width:500px) {
+            .text_center2 {
+
+                margin-top: 150px;
+                margin-bottom: 100px;
+            }
+
+        }
+
+        @media screen and (max-width:450px) {
+            .text_center2 {
+
+                margin-top: 300px;
+                margin-bottom: 100px;
+            }
+
+        }
+
+        @media screen and (max-width:400px) {
+            .text_center2 {
+
+                margin-top: 400px;
+                margin-bottom: 100px;
+            }
+
+        }
+
+        @media screen and (max-width:350px) {
+            .text_center2 {
+
+                margin-top: 450px;
+                margin-bottom: 40px;
+            }
+
+        }
+
+        /* ----------------------------------- */
+        @media screen and (max-width:720px) {
+            .show_on_desk {
+                display: none !important;
+            }
+
+        }
+
+        @media screen and (min-width:720px) {
+            .show_on_mobile {
+                display: none !important;
+            }
+
+        }
+
+
+        /* -------------------------------------- */
+
+        .text_center3 {
+            position: relative;
+            text-align: center;
+            letter-spacing: 8px;
+            font-family: 'Amethysta', serif;
+            margin-top: 200px;
+            margin-bottom: 70px;
+        }
+
+        .text_center3::before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 1px;
+            background: #000;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .all_re {
+
+            font-size: 1.5rem;
+            font-family: 'Amethysta', serif;
+        }
+
+        .text_ctrl_all {
+
+            text-align: center;
+            margin-bottom: 200px;
+
+        }
+
+        @media screen and (max-width:350px) {
+            .text_ctrl_all {
+                padding: 0 5px;
+                font-size: 0.8rem;
+            }
+        }
+
+        .text_ctrl_all .d-flex {
+            justify-content: center;
+
+        }
+
+        .text_ctrl_all .text_2 {
+            margin-top: 100px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .text_ctrl_all figure img {
+            width: 100%;
+        }
+
+        .text_ctrl_all h1 {
+            margin: 60px 0 30px 0;
+        }
+
+        .text_ctrl_all p {
+            letter-spacing: 4px;
+        }
+
+        .text_ctrl_all span {
+            color: rgb(129, 129, 129);
+        }
+
+        .bottom_text {
+            color: rgb(201, 201, 201);
+            margin: 50px 0 0 0;
+            font-size: 0.4rem;
+            letter-spacing: -1px;
+        }
+
+        /* --------------------------------------------------- */
+        @media screen and (max-width:1024px) {
+            .text_ctrl_all {
+                margin-top: -100px;
+            }
+
+            .container {
+                max-width: 980px;
+            }
+        }
+
+        .all_re {
+            margin-top: 60px;
+        }
+
+        @media screen and (max-width:500px) {
+            .text_ctrl_all {
+                margin-top: -100px;
+            }
+
+
+        }
+
+        .all_re {
+            margin-top: 60px;
+        }
+
+        /* -------------footer------------------------------ */
+        footer .line {
+            margin: 0 auto;
+            width: 100%;
+            height: 1px;
+            background: rgb(163, 163, 163);
+            /* margin-bottom: 50px; */
+        }
+
+        .footer_ul {
+            height: 100px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer_ul p {
+            letter-spacing: 3px;
+            font-size: .6rem;
+            margin: 0;
+        }
+
+        .footer_ul ul li img {
+            height: 25px;
+            margin: 0 15px;
+        }
+
+        .buttom_text {
+            margin: 20px 0;
+
+        }
+
+        .buttom_text li {
+            margin: 0 10px;
+
+        }
+
+        .buttom_text li a {
+            text-decoration: none;
+            color: #000;
+
+        }
+
+        @media screen and (max-width:380px) {
+            .footer_ul .buttom_text {
+                max-width: 280px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+
+
+
+        /* ------------------------------------------ */
+        .go-top {
+            position: fixed;
+            bottom: 2em;
+            right: 0.5em;
+            text-decoration: none;
+            /* color: white; */
+            /* background-color: rgba(0, 0, 0, 0.3); */
+            font-size: 12px;
+            padding: 1em;
+            display: none;
+
+        }
+
+        .go-top img {
+            height: 35px;
+            transform: rotate(-90deg);
+        }
+
+        /* -------------------------------------------------------- */
+    </style>
+</head>
+
+<body>
+
+    <!-- -------------------nav--------------------------------    -->
+    <nav>
+        <div class="d-flex  container ">
+            <div>
+                <a href="index.html"> <img class="img" src="images/jd-logo.svg" alt=""></a>
+            </div>
+            <ul id="nav_ul_1" class="d-flex ctul">
+                <li class="show_desktop_nav"><a href="index.html">HOME</a></li>
+                <li class="show_desktop_nav"><a href="portoflio.html">PORTFOLIO</a></li>
+                <li class="show_desktop_nav"><a href="contact.html">CONTACT</a></li>
+
+                <li class=" show_mobile_nav">
+                    <div class=" nav_mobile">
+                        <div class="cttlm">
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu show_mobile_nav">
+            <div class="menu_size">
+                <ul class="transition">
+                    <li><a class="transition" href="index.html">HOME</a></li>
+                    <li><a class="transition" href="portoflio.html">PORTFOLIO</a></li>
+                    <li><a class="transition" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ----------------------------------------------- -->
+
+
+    <!-- --------------中間大圖----------------->
+
+
+    <!-- ------------bg01--------------- -->
+
+
+
+    <div class="margin01">
+        <div class=" pit "></div>
+        <div class="container d-flex">
+            <div class="margin01_box ">
+                <p class="bg_mar_p "><a href="portoflio.html"> UI/UX</a></p>
+            </div>
+            <div class=" bg_mar margin01_box">
+                <p class="bg_mar_p"><a href="portoflio.html">GRAPHIC DESIGN</a></p>
+            </div>
+            <div class="margin01_box">
+                <p class="bg_mar_p"><a href="portoflio.html">VIDEO</a></p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- ----02---- -->
+
+
+    <div class="container bg02">
+        <p class="text_center1">ABOUT ME</p>
+        <div class="d-flex">
+            <div class="bg02_text">
+
+                <p class="text_p">
+
+                    <span> 自我經歷</span><br>
+                    JASPER。本名:周志鵬，畢業於致理科技大學-多媒體設計系，從事設計相關工作3年，專長有平面設計、影片剪輯(PR)、動畫後製(AE)、網頁設計，接過影片拍攝專案-台北市關渡宮。<br>
+                    <span> 不斷學習與突破，作品才會有靈魂</span>
+                    <br>
+                    設計就像五顏六色的顏料，每換不同的顏色去塗抹、上色，就會賦予作品全新的靈魂，如果能不斷的運用不同顏色發揮，那將會是一件有趣的事。
+                </p>
+            </div>
+            <figure class="pic_text"><img src="images/pt01.jpg" alt=""></figure>
+        </div>
+    </div>
+
+    <div class=" bg03 container">
+        <div class=" text_center2">
+            <p>PORTFOLIO</p>
+        </div>
+        <div class="d-flex show_on_desk">
+            <figure>
+                <img src="images/pt09.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="images/pt08.jpg" alt="">
+                <a href="portoflio.html">
+                    <span class="bg03_text">All Portfolio</span>
+                    <span class="bg03_text1">more</span>
+                </a>
+            </figure>
+        </div>
+        <div class="show_on_mobile container">
+            <figure>
+                <img class="mobile_img" src="images/pt08.jpg" alt="">
+            </figure>
+            <a href="portoflio.html">
+                <span class="bg03_text">All Portfolio</span>
+                <span class="bg03_text1">more</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="text_ctrl_all" class="text_ctrl_all  container">
+        <div class=" text_center3">
+            <p>SPECIALITY</p>
+        </div>
+        <p> CIS Design / <span>企業識別系統設計</span> </span></p>
+        <p>Graphic Design / <span>平面視覺設計</p>
+        <p>UI/UX Design / <span>UI/UX設計</span> </p>
+        <p>Animation / <span>動畫製作 </p>
+        <p>Video Editing / <span>影片剪輯製作</span></p>
+
+    </div>
+
+    <footer>
+
+        <div class="line"></div>
+        <div class="footer_ul container d-flex">
+
+            <ul class="d-flex">
+                <li class="nav_pic"><a href=""><img src="images/facebook.svg" alt=""></a></li>
+                <li class="nav_pic "><a href=""><img src="images/instagram.svg" alt=""></a></li>
+                <li class="nav_pic "><a href=""><img src="images/pinteres.svg" alt=""></a></li>
+
+            </ul>
+            <ul class="d-flex buttom_text">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portoflio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+            <p>© 2019 JD.All Rights Reserved. </p>
+        </div>
+
+        <a href="#" class="go-top"><img src="images/next-page-66.svg" alt=""></a>
+    </footer>
+
+
+
+
+    <span id="width" class="wid"></span>
+    <span id="height" class="hei"></span>
+
+
+
+    <script>
+        // -------------------------------------
+
+        $(function () {
+            $('.pit').vegas({
+                slides: [
+                    { src: 'images/pt002.jpg' },
+                    { src: 'images/pt05.jpg' },
+                    { src: 'images/pt03.jpg' },
+                    { src: 'images/pt06.jpg' },
+
+                ],
+                animation: ['kenburnsDown', 'kenburnsDownRight', 'kenburnsUp', 'kenburnsDownLeft',],
+                timer: false,
+                transition: 'fade',
+                delay: 7000,
+                transitionDuration: 2000,
+                shuffle: true,
+            });
+        });
+
+
+        // ------------menu------------------
+        $(".cttlm").click(function () {
+            $(this).toggleClass('active');
+            $(".menu_size").toggleClass('active');
+        });
+
+        // --------------------------------------------------
+        $(document).ready(function () {
+            $("#div1Link").click(function () {
+                $("html, body").animate({
+                    scrollTop: $("#div1").offset().top
+                }, { duration: 500, easing: "swing" });
+                return false;
+            });
+            $("#div2Link").click(function () {
+                $("html, body").animate({
+                    scrollTop: $("#div2").offset().top
+                }, { duration: 500, easing: "swing" });
+                return false;
+            });
+            $("#div3Link").click(function () {
+                $("html, body").animate({
+                    scrollTop: $("#div3").offset().top
+                }, { duration: 500, easing: "swing" });
+                return false;
+            });
+        });
+        // -------------------------
+
+
+        $(document).ready(function () {
+            // Show or hide the sticky footer button
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $('.go-top').fadeIn(200);
+                } else {
+                    $('.go-top').fadeOut(200);
+                }
+            });
+
+            // Animate the scroll to top
+            $('.go-top').click(function (event) {
+                event.preventDefault();
+
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            })
+        });
+        $(document).ready(function () {
+            $(window).resize(function () {
+                var width = $(window).width();
+                $("#width").text(width);
+                console.log(width);
+                var height = $(window).height();
+                $("#height").text(height);
+                console.log(height);
+            })
+        });
+        // --------------------------
+        // $(function () {
+        //     $(window).on('mousewheel', function (event) {
+        //         console.log(event.deltaX, event.deltaY, event.deltaFactor);
+
+        //     });
+
+
+        // });
+
+        // -------------------------------------------------------
+
+
+// ------------
+
+
+
+
+
+
+
+// --------------------
+    </script>
+
+
+</body>
+
+</html>

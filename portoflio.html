@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="jquery.mousewheel.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <script src="js/vegas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amethysta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nav.css">
+
+    <title>jasper's web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            font-family: "微軟正黑體";
+            box-sizing: border-box;
+        }
+
+
+        /* ------------width&height------------------- */
+        .wid {
+            display: none;
+        }
+
+        .hei {
+            display: none;
+        }
+
+        /* ------------參數區------------------------ */
+
+
+
+        .d-flex {
+            display: flex;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+      
+      
+        /* ------------------------------------------------- */
+        @media screen and (max-width:1700px) {
+            nav .container {
+                max-width: 1400px;
+            }
+        }
+
+        @media screen and (max-width:1550px) {
+            nav .container {
+                max-width: 1300px;
+            }
+        }
+
+        @media screen and (max-width:1440px) {
+            nav .container {
+                max-width: 1200px;
+            }
+        }
+
+        @media screen and (max-width:1350px) {
+            nav .container {
+                max-width: 1100px;
+            }
+        }
+
+        @media screen and (max-width:1250px) {
+            nav .container {
+                max-width: 1000px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            nav .container {
+                max-width: 900px;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            nav .container {
+                max-width: 740px;
+            }
+
+            nav img {
+                height: 40px;
+
+            }
+
+            .menu {
+                margin-top: -10px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+
+
+            .show_desktop_nav {
+                display: none;
+            }
+
+            nav li {
+                margin: 0 10px;
+            }
+
+            @media screen and (max-width:450px) {
+                .menu {
+                    padding: 0 0 0 180px;
+                }
+
+                nav .container {
+                    max-width: 400px;
+                }
+
+                nav {
+                    height: 150px;
+                }
+
+            }
+
+            @media screen and (max-width:400px) {
+                .menu {
+
+                    padding: 0 0 0 180px;
+                }
+
+                nav .container {
+                    max-width: 350px;
+                }
+
+            }
+
+            @media screen and (max-width:375px) {
+
+
+                nav .container {
+                    max-width: 350px;
+                }
+
+            }
+
+            @media screen and (max-width:320px) {
+                nav li {
+                    margin: 0;
+                }
+
+                nav .container {
+                    max-width: 300px;
+                }
+
+            }
+
+            /* ------------------- */
+            .show_mobile_nav {
+                display: block;
+            }
+
+            nav ul li a::after {
+
+                display: none;
+
+            }
+        }
+
+
+
+        /* -----------PORTOFLIO------------ */
+        .portoflio {
+            margin-bottom: 100px;
+        }
+
+        .portoflio .ctrl_four {
+            margin: 10px 0;
+            margin-top: 150px;
+            justify-content: center;
+
+        }
+
+        .portoflio .ctrl_four a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .portoflio .ctrl_four li {
+            color: #000;
+            margin: 0 30px;
+        }
+
+        @media screen and (max-width:500px) {
+            .portoflio .ctrl_four li {
+                color: #000;
+                margin: 0 20px;
+            }
+        }
+
+        .line_portoflio {
+            width: 100%;
+            height: 1px;
+            background: rgb(156, 156, 156);
+            margin-top: 30px;
+        }
+
+        .portoflio .ctrl_picture {
+            max-width: 1300px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            margin-top: 20px;
+        }
+
+        .img_box {
+            position: relative;
+            width: 300px;
+            height: auto;
+            margin: 20px;
+
+        }
+
+        .img_box img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width:330px) {
+            .img_box {
+                position: relative;
+                width: 250px;
+                height: auto;
+                margin: 20px;
+
+            }
+
+            .img_box img {
+                width: 100%;
+
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #fff;
+        }
+
+        .img_box:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: #000;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            line-height: 35px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 900;
+        }
+
+       
+
+
+
+
+
+
+
+
+
+
+
+        /* -------------footer------------------------------ */
+        footer .line {
+            margin: 0 auto;
+            width: 100%;
+            height: 1px;
+            background: rgb(163, 163, 163);
+            /* margin-bottom: 50px; */
+        }
+
+        .footer_ul {
+            height: 100px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer_ul p {
+            letter-spacing: 3px;
+            font-size: .6rem;
+            margin: 0;
+        }
+
+        .footer_ul ul li img {
+            height: 25px;
+            margin: 0 15px;
+        }
+
+        .buttom_text {
+            margin: 20px 0;
+
+        }
+
+        .buttom_text li {
+            margin: 0 10px;
+
+        }
+
+        .buttom_text li a {
+            text-decoration: none;
+            color: #000;
+
+        }
+
+        @media screen and (max-width:380px) {
+            .footer_ul .buttom_text {
+                max-width: 280px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+
+        /* ------------------------------------------ */
+        .go-top {
+            position: fixed;
+            bottom: 2em;
+            right: 0.5em;
+            text-decoration: none;
+            /* color: white; */
+            /* background-color: rgba(0, 0, 0, 0.3); */
+            font-size: 12px;
+            padding: 1em;
+            display: none;
+
+        }
+
+        .go-top img {
+            height: 35px;
+            transform: rotate(-90deg);
+        }
+
+        /* -------------------------------------------------------- */
+    </style>
+</head>
+
+<body>
+
+    <!-- -------------------nav--------------------------------    -->
+    <nav>
+            <div class="d-flex  container ">
+                <div>
+                    <a href="index.html"> <img class="img" src="images/jd-logo.svg" alt=""></a>
+                </div>
+                <ul id="nav_ul_1" class="d-flex ctul">
+                    <li class="show_desktop_nav"><a href="index.html">HOME</a></li>
+                    <li class="show_desktop_nav"><a href="portoflio.html">PORTFOLIO</a></li>
+                    <li class="show_desktop_nav"><a href="contact.html">CONTACT</a></li>
+    
+                    <li class=" show_mobile_nav">
+                        <div class=" nav_mobile">
+                            <div class="cttlm">
+                                <div class="bar bar1 transition"></div>
+                                <div class="bar bar2 transition"></div>
+                                <div class="bar bar3 transition"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu show_mobile_nav">
+                <div class="menu_size">
+                    <ul class="transition">
+                        <li><a class="transition" href="index.html">HOME</a></li>
+                        <li><a class="transition" href="portoflio.html">PORTFOLIO</a></li>
+                        <li><a class="transition" href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- ----------------------------------------------- -->
+
+
+    <!-- ------------bg01--------------- -->
+
+
+
+    <div class="portoflio ">
+        <div class="container">
+            <ul class="ctrl_four d-flex ">
+                <li id="li-all" class="hasliall"><a href="#">ALL</a></li>
+                <li id="li-ui-ux"><a href="#">UI/UX</a></li>
+                <li id="li-design"><a href="#">DESIGN</a></li>
+                <li id="li-video"><a href="#">VIDEO</a></li>
+            </ul>
+        </div>
+        <div class="line_portoflio"></div>
+
+
+        <div class="container d-flex ctrl_picture">
+
+            <div id="ctrl_pict1" class="contrl_box  
+            displayGraphic">
+                <div class="img_box">
+                    <img src="images/picture_001.jpg" alt="">
+                    <a href="work01.html" class="overlay">
+                        <div class="text">CIS</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ctrl_pict2" class="contrl_box  displayGraphic">
+                <div class="img_box">
+                    <img src="images/picture_002.jpg" alt="">
+                    <a href="work02.html" class="overlay">
+                        <div class="text">Clothes Card</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ctrl_pict3" class="contrl_box   displayGraphic">
+                <div class="img_box">
+                    <img src="images/picture_003.jpg" alt="">
+                    <a href="work03.html" class="overlay">
+                        <div class="text">
+                            Jersey Design</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ctrl_pict4" class="contrl_box   displayGraphic">
+                <div class="img_box ">
+                    <img src="images/picture_004.jpg" alt="">
+                    <a href="work04.html" class="overlay">
+                        <div class="text">Basketball Logos</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ctrl_pict5" class="contrl_box  webCtrl">
+                <div class="img_box ">
+                    <img src="images/picture_005.jpg" alt="">
+                    <a href="work05.html" class="overlay">
+                        <div class="text">
+                            Mobile UI/UX</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ctrl_pict6" class="contrl_box displayGraphic">
+                <div class="img_box ">
+                    <img src="images/picture_006.jpg" alt="">
+                    <a href="work06.html" class="overlay">
+                        <div class="text">Hot Pot DM</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ctrl_pict7" class="contrl_box   displayGraphic">
+                <div class="img_box ">
+                    <img src="images/picture_007.jpg" alt="">
+                    <a href="work07.html" class="overlay">
+                        <div class="text">UA Banner</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ctrl_pict8" class="contrl_box  videoCtrl">
+                <div class="img_box ">
+                    <img src="images/picture_008.jpg" alt="">
+                    <a href="work08.html" class="overlay">
+                        <div class="text">Animation</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="ctrl_pict9" class="contrl_box  webCtrl">
+                <div class="img_box ">
+                    <img src="images/picture_009.jpg" alt="">
+                    <a href="work09.html" class="overlay">
+                        <div class="text">Web</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <footer>
+
+        <div class="line"></div>
+        <div class="footer_ul container d-flex">
+
+            <ul class="d-flex">
+                <li class="nav_pic"><a href=""><img src="images/facebook.svg" alt=""></a></li>
+                <li class="nav_pic "><a href=""><img src="images/instagram.svg" alt=""></a></li>
+                <li class="nav_pic "><a href=""><img src="images/pinteres.svg" alt=""></a></li>
+
+            </ul>
+            <ul class="d-flex buttom_text">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portoflio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <p>© 2019 JD.All Rights Reserved. </p>
+        </div>
+
+        <a href="#" class="go-top"><img src="images/next-page-66.svg" alt=""></a>
+    </footer>
+
+
+
+
+    
+
+
+    <script>
+        // -------------------------------------
+
+        // $(function () {
+        //     $('.pit').vegas({
+        //         slides: [
+        //             { src: 'images/pt002.jpg' },
+        //             { src: 'images/pt05.jpg' },
+        //             { src: 'images/pt03.jpg' },
+        //             { src: 'images/pt06.jpg' },
+
+        //         ],
+        //         animation: ['kenburnsDown', 'kenburnsDownRight', 'kenburnsUp', 'kenburnsDownLeft',],
+        //         timer: false,
+        //         transition: 'fade',
+        //         delay: 7000,
+        //         transitionDuration: 2000,
+        //         shuffle: true,
+        //     });
+        // });
+
+
+        // ------------menu------------------
+          $(".cttlm").click(function () {
+            $(this).toggleClass('active');
+            $(".menu_size").toggleClass('active');
+        });
+        // ---------------------
+        $(document).ready(function () {
+            var hasthisli = $("#li-all").hasClass("hasliall");
+            if (hasthisli == true) {
+                // $("#ctrl_pict1").removeClass("hide_pict1");
+                // $("#ctrl_pict2").removeClass("hide_pict2");
+                // $("#ctrl_pict3").removeClass("hide_pict3");
+                // $("#ctrl_pict4").removeClass("hide_pict4");
+                // $("#ctrl_pict5").removeClass("hide_pict5");
+                // $("#ctrl_pict6").removeClass("hide_pict6");
+                // $("#ctrl_pict7").removeClass("hide_pict7");
+                // $("#ctrl_pict8").removeClass("hide_pict8");
+                // $("#ctrl_pict9").removeClass("hide_pict9");
+
+            };
+            console.log(hasthisli);
+        });
+        // ------------add&remove--------------
+
+        $("#li-all").click(function () {
+          
+            $("div").siblings(".displayGraphic").css("display","block");
+            $("div").siblings(".videoCtrl").css("display","block");
+            $("div").siblings(".webCtrl").css("display","block");
+        });
+
+        $("#li-ui-ux").click(function () {
+          
+            $("div").siblings(".displayGraphic").css("display","none");
+            $("div").siblings(".videoCtrl").css("display","none");
+            $("div").siblings(".webCtrl").css("display","block");
+        });
+
+        $("#li-design").click(function () {
+          
+            $("div").siblings(".webCtrl").css("display","none");
+            $("div").siblings(".videoCtrl").css("display","none");
+            $("div").siblings(".displayGraphic").css("display","block");
+        });
+
+        $("#li-video").click(function () {
+           
+            $("div").siblings(".webCtrl").css("display","none");
+            $("div").siblings(".displayGraphic").css("display","none");
+            $("div").siblings(".videoCtrl").css("display","block");
+        });
+        // ---------------------
+       
+        // -------------------------
+        // function MouseWheel(e) {
+        //     javascript: mctmp(0);
+        //     e = e || window.event;
+        //     alert(['scrolled ', ((e.wheelDelta <= 0 || e.detail > 0) ? 'down' : 'up')].join(''));
+        // }
+
+
+        // if ('onmousewheel' in window) {
+        //     window.onmousewheel = MouseWheel;
+        // } else if ('onmousewheel' in document) {
+        //     document.onmousewheel = MouseWheel;
+        // } else if ('addEventListener' in window) {
+        //     window.addEventListener("mousewheel", MouseWheel, false);
+        //     window.addEventListener("DOMMouseScroll", MouseWheel, false);
+        // }
+
+
+
+        // -----------------
+        $(document).ready(function () {
+            // Show or hide the sticky footer button
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $('.go-top').fadeIn(200);
+                } else {
+                    $('.go-top').fadeOut(200);
+                }
+            });
+
+            // Animate the scroll to top
+            $('.go-top').click(function (event) {
+                event.preventDefault();
+
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            })
+        });
+        $(document).ready(function () {
+            $(window).resize(function () {
+                var width = $(window).width();
+                $("#width").text(width);
+                console.log(width);
+                var height = $(window).height();
+                $("#height").text(height);
+                console.log(height);
+            })
+        });
+
+
+
+// ------------
+
+
+
+
+
+
+
+// --------------------
+    </script>
+
+
+</body>
+
+</html>

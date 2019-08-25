@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+    <title>jasper's web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* overflow: hidden; */
+            background: #fff;
+            font-family: "微軟正黑體";
+            box-sizing: border-box;
+        }
+
+        .overflow_body {
+            overflow: hidden;
+        }
+
+        /* ------------width&height------------------- */
+        .wid {
+            display: none;
+        }
+
+        .hei {
+            display: none;
+        }
+
+        /* ----------animation--------------------- */
+
+
+
+        /* -------------中間大板---------------- */
+        @media screen and (max-width: 1030px) {
+            .all_re {
+                display: none !important;
+            }
+        }
+
+        /* ------------------------------------ */
+        .bg_ctrl {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            transition: transform 1000ms ease 0s;
+            /* z-index: -5; */
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        /* -------------button(up down right left)----------------- */
+        /* ------------位置寫$數會跟著一動，寫px會被螢幕吃掉------------------- */
+        .button01 {
+            width: 100px;
+            height: auto;
+            display: block;
+            position: absolute;
+            z-index: 70;
+            left: 95%;
+            top: 45%;
+
+        }
+
+        .button01 img {
+            opacity: 0.1;
+            height: 40px;
+        }
+
+        .button01:hover img {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        /* --------- */
+        .button02 {
+            width: 100px;
+            height: auto;
+            display: block;
+            position: absolute;
+            z-index: 70;
+            left: 50%;
+            top: 90%;
+
+        }
+
+        .button02 img {
+            height: 40px;
+            transform: rotate(90deg);
+            opacity: 0.1;
+        }
+
+        .button02:hover img {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        /* --------- */
+        .button03 {
+            width: 100px;
+            height: auto;
+            display: block;
+            position: absolute;
+            z-index: 70;
+            left: 2%;
+            top: 50%;
+
+        }
+
+        .button03 img {
+            height: 40px;
+            transform: rotate(180deg);
+            opacity: 0.1;
+        }
+
+        .button03:hover img {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        /* --------- */
+        .button04 {
+            width: 100px;
+            height: auto;
+            display: block;
+            position: absolute;
+            z-index: 120;
+            left: 51%;
+            top: 12%;
+
+        }
+
+        .button04 img {
+            height: 40px;
+            transform: rotate(270deg);
+            opacity: 0.1;
+        }
+
+        .button04:hover img {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        /* --------------左側標題------------------------ */
+        .left_title2 {
+            position: absolute;
+            top: 35%;
+            left: 3%;
+            height: 100px;
+            line-height: 10px;
+            z-index: 30;
+        }
+
+        .left_title2 h1 {
+            font-weight: 900;
+        }
+
+        .left_title2 p {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        /* --------- */
+        .left_title3 {
+            position: absolute;
+            top: 35%;
+            left: 3%;
+            height: 100px;
+            line-height: 10px;
+            z-index: 30;
+        }
+
+        .left_title3 h1 {
+            font-weight: 900;
+        }
+
+        .left_title3 p {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        /* --------- */
+        .left_title4 {
+            position: absolute;
+            top: 35%;
+            left: 3%;
+            height: 100px;
+            line-height: 10px;
+            z-index: 30;
+        }
+
+        .left_title4 h1 {
+            font-weight: 900;
+        }
+
+        .left_title4 p {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+
+
+
+
+
+        /* 
+-------------------中間大板big_center_bg------------------------------ */
+        .bg_logo figure .bg_big01 {
+            /* width: 600px; */
+            width: 400px;
+            height: 600px;
+            background: #dac655;
+            border-radius: 5%;
+            /* position: fixed; */
+            position: absolute;
+            top: 63vh;
+            left: 80%;
+            transition: transform 1000ms ease 0s;
+            z-index: 1;
+        }
+
+        .bg_logo figure .bg_big02 {
+            width: 600px;
+            height: 600px;
+            background: #dac655;
+            /* position: fixed; */
+            position: absolute;
+            top: 63vh;
+            left: 70%;
+            transition: transform 2000ms ease 0s;
+            z-index: 1;
+        }
+
+        .bg_logo figure .bg_big03 {
+            width: 650px;
+            height: 650px;
+            background: #dac655;
+            /* position: fixed; */
+            position: absolute;
+            top: 63vh;
+            left: 70%;
+            transition: transform 1500ms ease 0s;
+            z-index: 1;
+        }
+
+
+
+
+        .bg_logo figure img {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            top: 63vh;
+            left: 79%;
+            z-index: 2;
+            /* background: #000; */
+            transition: transform 2000ms ease 0s;
+        }
+
+        @media screen and (max-width: 1097px) {
+            .bg_logo figure .bg_big03 {
+                width: 600px;
+                height: 600px;
+                background: #dac655;
+                /* position: fixed; */
+                position: absolute;
+                top: 63vh;
+                left: 60%;
+                transition: transform 1500ms ease 0s;
+                z-index: 1;
+            }
+
+        }
+
+
+
+        /* ---------------nav-------------------- */
+
+        nav {
+            width: 100%;
+            position: fixed;
+            z-index: 50;
+            box-sizing: border-box;
+            padding: 15px 80px 0 20px;
+            justify-content: space-between;
+            /* background: #fff; */
+            top: 0;
+        }
+
+        nav img {
+            height: 60px;
+            padding: 0 0 10px 0;
+        }
+
+        .nav_ul_1 {
+            width: 730px;
+        }
+
+        nav .nav_ul_1 li {
+            list-style: none;
+            margin: 0 0 0 80px;
+            /* padding: 0 20px; */
+        }
+
+        nav .nav_ul_1 li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .ct_right {
+            /* margin-right: 50px; */
+            padding-right: 40px;
+        }
+
+
+
+        .nav_pic img {
+            height: 25px;
+            margin: -5px -40px;
+            /* padding:0 -30px ; */
+        }
+
+
+        /* --------------------------------------- */
+        .bg01 {
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .ctl_pic {
+            width: 70%;
+
+        }
+
+        .bg01 .pic_1 {
+            padding: 0;
+            margin: 0;
+            max-width: 1000px;
+            min-width: 900px;
+            height: 600px;
+            overflow: hidden;
+            position: relative;
+            top: 12%;
+            left: 2%;
+            z-index: 9;
+
+        }
+
+        .bg01 .pic_1 img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            z-index: 9;
+            top: 13%;
+        }
+
+        .three_text {
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            top: 75%;
+            left: 5%;
+            z-index: 30;
+            line-height: 15px;
+            letter-spacing: 2px;
+
+
+        }
+
+        .three_text h1 {
+            margin-bottom: 10px;
+            position: relative;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .three_text h1::after {
+            margin-bottom: 10px;
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 58px;
+            background: #000;
+            bottom: -30px;
+            left: 3px;
+            z-index: 20;
+        }
+
+        .two_text {
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            top: 84%;
+            left: 45%;
+            font-size: 0.5rem;
+            z-index: 20;
+        }
+
+        .text_ct {
+            color: rgb(172, 172, 172);
+        }
+
+        .right_three_text {
+
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            top: 30%;
+            left: 60%;
+            z-index: 50;
+            line-height: 40px;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            transition: .5s;
+        }
+
+
+        .right_three_text h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            /* font-family: serif; */
+            /* margin: 0 0 10px 0; */
+            padding: 0;
+            letter-spacing: 1px;
+            position: absolute;
+            z-index: 20;
+        }
+
+
+        .big_p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            /* font-weight: 900; */
+            letter-spacing: 5px;
+            z-index: 20;
+            position: absolute;
+            top: 5%;
+        }
+
+        .big_p2 {
+            padding: 20px 0 0 160px;
+            font-size: 2rem;
+            letter-spacing: 5px;
+            position: absolute;
+            top: 20%;
+            z-index: 20;
+        }
+
+        .text_bg {
+            width: 350px;
+            height: 50px;
+            position: absolute;
+            top: 27%;
+            left: 10%;
+            z-index: 18;
+            background: #dac655;
+        }
+
+        /* -----------------animation-------------------- */
+        .fadeInLeft {
+
+            animation-duration: 3s;
+        }
+
+        .fadeInLeft {
+            animation-duration: 3s;
+        }
+
+        /* ------------------------- */
+        @media screen and (max-width: 1200px) {
+
+            /* 移動3字標題   */
+            .right_three_text {
+                top: 30%;
+                left: 49%;
+            }
+        }
+
+        @media screen and (max-width: 1190px) {
+
+            /* 移除3字標題   */
+            .show_desktop {
+                display: none !important;
+            }
+
+            .show_mobile {
+                display: block !important;
+            }
+        }
+
+        /* ----bg01_pad平板區------- */
+
+        @media screen and (max-width: 1030px) {
+
+            /* ----------nav-------------------   */
+            .show_desktop_nav {
+                display: none !important;
+            }
+
+            .show_mobile_nav {
+                display: block !important;
+            }
+
+            .ctl_pad_nav {
+                justify-content: space-between;
+            }
+
+            .nav_pic_1 img {
+                height: 25px;
+            }
+
+            nav {
+                padding: 15px 20px 0 40px;
+            }
+
+            .ctl_pad_nav .img {
+                margin-top: 10px;
+                height: 38px;
+            }
+
+            .nav_pad_bg {
+                background: #fff;
+            }
+
+            /* ----------bg01-------------------   */
+            .ctl_pic {
+                width: 100%;
+
+            }
+
+            .pic_1 {
+                padding: 0;
+                margin: 80px 0 0 0;
+                max-width: 1030px;
+                position: static;
+                max-width: 1030px;
+                overflow: hidden;
+            }
+
+            .pic_1 img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .three_text {
+                width: 100%;
+                /* height: 100px; */
+                /* margin:10px  5px 0; */
+                /* line-height: 10px; */
+                letter-spacing: 2px;
+                padding: 0 30px;
+                margin: 15px 0;
+                position: static;
+            }
+
+
+
+
+            .three_text h1 {
+                margin-bottom: 10px;
+                position: relative;
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+
+            .three_text h1::after {
+                margin-bottom: 10px;
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 58px;
+                background: #000;
+                bottom: -30px;
+                left: 3px;
+                z-index: 20;
+            }
+
+            .flex_three_two {
+                display: flex;
+                /* height: 150px; */
+                align-items: center;
+                justify-content: space-around;
+                margin: -40px 10px 0 10px;
+
+
+            }
+
+            .two_text {
+                margin: 140px 0 0 0;
+                position: static;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+
+            /* ----------bg01-------------------   */
+            .pic_1 {
+                padding: 0;
+                margin: 80px 0 0 0;
+                width: 100%;
+                position: static;
+            }
+
+            .pic_1 img {
+                width: 100%;
+            }
+
+            .three_text {
+                width: 500px;
+                height: 50px;
+                /* margin:10px  5px 0; */
+                line-height: 15px;
+                letter-spacing: 2px;
+                padding: 0;
+                margin: 0 10px;
+                position: static;
+            }
+
+            .three_text h1 {
+                margin-bottom: 10px;
+                position: relative;
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+
+            .display_p {
+                display: none;
+            }
+
+            .three_text h1::after {
+                margin-bottom: 10px;
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 58px;
+                background: #000;
+                bottom: -30px;
+                left: 3px;
+                z-index: 20;
+            }
+
+            .flex_three_two {
+                display: flex;
+                /* height: 150px; */
+                align-items: center;
+                position: static;
+
+
+
+            }
+
+            .two_text {
+                margin: 140px 0 0 0;
+                position: static;
+            }
+
+        }
+
+
+        @media screen and (max-width: 375px) {
+            .display_p {
+                display: none;
+            }
+        }
+
+
+        /* ------------#02----------------- */
+
+
+        .bg02 {
+            width: 100%;
+            /* height: 1000px; */
+            height: 100vh;
+            /* background: rgb(17, 97, 218); */
+            background: #fff;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            /* max-height: 1000px; */
+            box-sizing: border-box;
+        }
+
+        /* ------------------------------ */
+
+
+
+        /* ------------------------------ */
+        .ctrl_bg02 {
+            /* align-items: center; */
+            position: absolute;
+            z-index: 30;
+            top: 25%;
+            left: 35%;
+        }
+
+        .ctrl_bg02 img {
+            width: auto;
+            max-height: 500px;
+            margin: 20px 20px 0 0;
+            /* position: absolute; */
+            /* top: 70%; */
+            /* left: 38%;
+            z-index: 30; */
+        }
+
+        .bg02 .ctrl_h1-p {
+            margin: 40px 0 0 0;
+            /* min-width: 500px; */
+            /* top: 30%;
+            left: 60%;
+            position: absolute; */
+
+        }
+
+
+        .bg02 .ctrl_h1-p h1 {
+            font-size: 2.5rem;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 5px;
+            z-index: 20;
+        }
+
+        .bg02 .ctrl_h1-p h1::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 40px;
+            background: #000;
+            top: -8px;
+            left: 4px;
+        }
+
+        .bg02 .ctrl_h1-p p {
+            line-height: 28px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .bg02 .ctrl_h1-p p span {
+            font-weight: 900;
+            font-size: 1.1rem;
+            margin: 20px 0;
+        }
+
+        .bg02_ctrl_h1 {
+            width: 200px;
+            height: 40px;
+            position: absolute;
+            top: 13%;
+            left: 60%;
+            z-index: 2;
+            background: #dac655;
+        }
+
+        /* ---------animation-------------------- */
+
+
+
+
+
+        /* ------------------------- */
+        @media screen and (max-width: 1100px) {
+            .ctrl_bg02 {
+                /* align-items: center; */
+                position: absolute;
+                z-index: 30;
+                top: 25%;
+                left: 25%;
+                transition: .5s;
+            }
+        }
+
+        /* -------------pad_bg02--------------------- */
+        @media screen and (max-width: 1030px) {
+
+            .left_title_pad {
+                width: 100%;
+                height: 10px;
+                line-height: 10px;
+                text-align: center;
+                margin: 20px 0;
+                margin-top: 100px;
+
+            }
+
+            .left_title_pad h1 {
+                font-weight: 900;
+                margin-top: 100px;
+                font-size: 1.8rem;
+            }
+
+            .left_title_pad p {
+                font-size: 0.6rem;
+                letter-spacing: 2px;
+            }
+
+
+            .ctrl_bg02_pad {
+                width: 85%;
+                height: auto;
+                overflow: hidden;
+                /* text-align: center; */
+                margin: 0 auto;
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin-bottom: 50px;
+                box-sizing: border-box;
+
+            }
+
+            .ctrl_bg02_pad img {
+                width: 100%;
+                object-fit: cover;
+                margin: 40px 0;
+            }
+
+            .ctrl_bg02_pad h1 {
+                font-size: 1.5rem;
+                letter-spacing: 5px;
+                position: relative;
+                margin: 10px 0;
+            }
+
+            .ctrl_bg02_pad h1::after {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 40px;
+                background: #000;
+                top: -8px;
+                left: 4px;
+
+            }
+
+            .ctrl_bg02_pad p {
+                line-height: 26px;
+                font-size: 0.9rem;
+                margin: 0;
+                letter-spacing: 2px;
+            }
+
+            .ctrl_bg02_pad p span {
+                font-weight: 900;
+                font-size: 1rem;
+                margin: 20px 0;
+            }
+        }
+
+        /* ---------------#03-------------------- */
+        .bg03 {
+            width: 100%;
+            /* height: 1000px; */
+            height: 100vh;
+            background: #fff;
+            /* background: rgb(136, 33, 33); */
+            position: absolute;
+            left: 100%;
+            top: 100vh;
+            /* max-height: 1000px; */
+            box-sizing: border-box;
+        }
+
+        .containter {
+            max-width: 1200px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: absolute;
+            z-index: 20;
+            left: 23%;
+            top: 10%;
+        }
+
+        .img_box {
+            position: relative;
+            width: 300px;
+            height: auto;
+            margin: 20px;
+        }
+
+        .img_box img {
+
+            width: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #fff;
+        }
+
+        .img_box:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: #000;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            line-height: 35px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 900;
+        }
+
+        @media screen and (min-width:1324px) {
+            .show_desktop3 {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1324px) {
+            .show_desktop2 {
+                display: none;
+            }
+
+            .btn {
+                width: 100px;
+                height: 40px;
+                border: 1px solid rgb(104, 104, 104);
+                border-radius: 3%;
+                position: absolute;
+                top: 720px;
+                left: 560px;
+                z-index: 100;
+                background: #fff;
+                text-align: center;
+                line-height: 40px;
+                display: block;
+                text-decoration: none;
+                color: rgb(104, 104, 104);
+            }
+        }
+
+        /* ---------------#bg03----------------------- */
+        @media screen and (max-width: 1030px) {
+            .left_title_pad3 {
+                width: 100%;
+                height: 10px;
+                line-height: 10px;
+                text-align: center;
+                margin: 20px 0;
+                margin-top: 150px;
+
+            }
+
+            .left_title_pad3 h1 {
+                font-weight: 900;
+                margin-top: 100px;
+                font-size: 1.8rem;
+            }
+
+            .left_title_pad3 p {
+                font-size: 0.6rem;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            .containter_pad {
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                position: relative;
+                margin: 50px 0;
+                justify-content: center;
+            }
+
+            /* ---- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /* ---- */
+            .btn {
+                width: 100px;
+                height: 40px;
+                border: 1px solid rgb(104, 104, 104);
+                border-radius: 3%;
+                position: absolute;
+                top: 98%;
+                left: 72%;
+                z-index: 100;
+                background: #fff;
+                text-align: center;
+                line-height: 40px;
+                display: block;
+                text-decoration: none;
+                color: rgb(104, 104, 104);
+                margin: 10px 0;
+                margin-bottom: 30px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+        @media screen and (max-width: 679px) {
+            .show_desktop4 {
+                display: none;
+            }
+
+            .img_box {
+                position: relative;
+                width: 400px;
+                height: auto;
+                margin: 10px;
+            }
+
+
+            .btn {
+                width: 100px;
+                height: 40px;
+                border: 1px solid rgb(104, 104, 104);
+                border-radius: 3%;
+                position: absolute;
+                top: 99%;
+                left: 70%;
+                z-index: 100;
+                background: #fff;
+                text-align: center;
+                line-height: 40px;
+                display: block;
+                text-decoration: none;
+                color: rgb(104, 104, 104);
+                margin: 10px 0;
+                margin-bottom: 30px;
+            }
+
+
+        }
+
+
+        @media screen and (max-width: 320px) {
+            .show_desktop4 {
+                display: none;
+            }
+
+            .img_box {
+                position: relative;
+                width: 400px;
+                height: auto;
+                margin: 10px;
+            }
+
+
+            .btn {
+                width: 100px;
+                height: 40px;
+                border: 1px solid rgb(104, 104, 104);
+                border-radius: 3%;
+                position: absolute;
+                top: 99%;
+                left: 65%;
+                z-index: 100;
+                background: #fff;
+                text-align: center;
+                line-height: 40px;
+                display: block;
+                text-decoration: none;
+                color: rgb(104, 104, 104);
+                margin: 10px 0;
+                margin-bottom: 30px;
+            }
+
+
+        }
+
+
+
+        /* ------------------------------------ */
+
+
+
+
+        /* -------------------#04---------------------------- */
+        .bg04 {
+            width: 100%;
+            /* height: 1000px; */
+            height: 100vh;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            top: 100vh;
+            /* max-height: 1000px; */
+            box-sizing: border-box;
+        }
+
+        .text_ctrl_all {
+            position: relative;
+            top: 30%;
+            left: 1.5%;
+            text-align: center;
+        }
+
+        .text_ctrl_all h1 {
+            margin: 0 0 50px 0;
+        }
+
+        .text_ctrl_all p {
+            letter-spacing: 2px;
+        }
+
+        .text_ctrl_all span {
+            color: rgb(129, 129, 129);
+        }
+
+        .bottom_text {
+            color: rgb(63, 63, 63);
+            margin: 300px 0 0 0;
+            font-size: 0.4rem;
+            letter-spacing: -1px;
+        }
+
+        /* ------------#bg04------------------------- */
+
+
+        @media screen and (max-width: 1030px) {
+
+            .left_title_pad4 {
+                width: 100%;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                margin: 20px 0;
+                margin-top: 180px;
+
+            }
+
+            .left_title_pad4 h1 {
+                font-weight: 900;
+                margin-top: 100px;
+                font-size: 1.8rem;
+            }
+
+            .left_title_pad4 p {
+                font-size: 0.6rem;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+
+
+
+            .text_ctrl_all_pad {
+                margin-top: 60px;
+                text-align: center;
+            }
+
+            .text_ctrl_all_pad h1 {
+                margin: 0 0 10px 0;
+                font-size: 1.5rem;
+            }
+
+            .text_ctrl_all_pad p {
+                letter-spacing: 2px;
+                font-size: 0.7rem;
+            }
+
+            .text_ctrl_all_pad span {
+                color: rgb(129, 129, 129);
+            }
+
+
+
+
+            .bottom_text {
+                color: rgb(63, 63, 63);
+                margin: 30px 0 40px 0;
+                font-size: 0.4rem;
+                letter-spacing: -1px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* -------------------------------------------------------- */
+    </style>
+</head>
+
+<body id="overflow_body" class="overflow_body">
+
+    <!-- -------------------nav--------------------------------    -->
+    <nav class="d-flex ctl_pad_nav nav_pad_bg">
+        <div>
+            <a href=""> <img class="img" src="images/jd-logo.svg" alt=""></a>
+        </div>
+        <ul id="nav_ul_1" class="d-flex nav_ul_1">
+            <li class="show_desktop_nav"><a href="">UI/UX</a></li>
+            <li class="show_desktop_nav"><a href="">Design</a></li>
+            <li class="show_desktop_nav"><a href="">Video</a></li>
+            <li class="ct_right show_desktop_nav"><a href="">Contact</a></li>
+            <li class="nav_pic show_desktop_nav"><a href=""><img src="images/facebook.svg" alt=""></a></li>
+            <li class="nav_pic show_desktop_nav"><a href=""><img src="images/instagram.svg" alt=""></a></li>
+            <li class="nav_pic show_desktop_nav"><a href=""><img src="images/pinteres.svg" alt=""></a></li>
+            <li class="nav_pic_1 show_mobile_nav"><a href=""><img src="images/menu.svg" alt=""></a></li>
+        </ul>
+
+    </nav>
+    <!-- ----------------------------------------------- -->
+
+    <div id="bg_ctrl" class="bg_ctrl">
+        <!-- --------------中間大圖----------------->
+
+
+        <div id="bg_logo" class="bg_logo all_re">
+            <figure>
+                <img class="all_re" id="img_big" src="images/jd-logo2.svg" alt="">
+                <!-- <div id="bg_big01" class="bg_big01  all_re"></div> -->
+                <!-- <div id="bg_big02" class="bg_big02  all_re"></div> -->
+                <div id="bg_big03" class="bg_big03  all_re"></div>
+            </figure>
+        </div>
+        <!-- -----------
+            
+            -bg01--------------- -->
+        <div id="re_bg01" class="bg01">
+
+
+            <a id="btn01" class="button01 show_desktop_nav"><img src="images/right-arrow.svg" alt=""> </a>
+
+
+
+
+            <div>
+                <section id="re_ctl_pic" class=" ctl_pic ">
+                    <figure id="repic_1" class="pic_1  animated fadeInUp delay-1s">
+                        <img src="images/pt01.jpg" alt="">
+                    </figure>
+                    <div class="flex_three_two">
+                        <div id="three_text" class="   three_text animated fadeInUp delay-2s">
+                            <h1>#01</h1>
+                            <br>
+                            <p>There is no shortcut to success
+                            </p>
+                            <p class="display_p">Commemorating this website</p>
+                        </div>
+                        <div id="two_text" class="two_text  animated fadeInUp delay-2s">
+                            <p>Welcome to my website
+                                <br><span class="text_ct">Thanks for watching</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="right_three_text show_desktop animated fadeInLeft delay-3s">
+                    <h1>2019</h1>
+                    <p class="big_p ">JASPER DESIGN</p>
+                    <p class="big_p2 ">STORY / WORLD</p>
+                    <div class="text_bg"></div>
+                </section>
+            </div>
+        </div>
+        <div id="re_bg02" class="bg02">
+            <a id="btn02" class="button02 show_desktop_nav">
+                <img src="images/right-arrow.svg" alt="">
+            </a>
+            <div id="left_title" class="left_title2 left_title_pad">
+                <h1>ABOUT</h1>
+                <p>我的經歷。我的故事</p>
+            </div>
+            <div id="ctrl_bg02" class="d-flex ctrl_bg02 ctrl_bg02_pad ">
+                <img src="images/pt02.jpg" alt="">
+                <div id="ctrl_h1-p" class="ctrl_h1-p ">
+                    <h1>ABOUT <br> ME</h1>
+                    <p>畢業於致理科技大學
+                        -多媒體設計系
+                        <br>從事設計相關工作3年
+                        <br>專長有平面設計、影片剪輯
+                        <br>動畫後製、網頁設計
+                        <br>接過影片拍攝專案-台北市關渡宮
+                        <br><span> 不斷學習與突破，
+                            作品才會有靈魂</span>
+                        <br>設計就像五顏六色的顏料
+                        <br>每換不同的顏色去塗抹、上色
+                        <br>就會賦予作品全新的靈魂
+                        <br>如果能不斷的運用不同顏色發揮
+                        <br>那將會是一件有趣的事。
+                    </p>
+                    <div id="bg02_ctrl_h1" class="bg02_ctrl_h1  show_desktop_nav "></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="re_bg03" class="bg03">
+            <a id="btn03" class="button03 show_desktop_nav">
+                <img src="images/right-arrow.svg" alt="">
+            </a>
+
+
+            <div id="left_title3" class="left_title3 left_title_pad3">
+                <h1>WORK</h1>
+                <p>作品特集。作品簡介</p>
+            </div>
+
+
+            <div id="containter" class="containter containter_pad">
+                <div class="img_box">
+                    <img src="images/picture_001.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">CIS</div>
+                    </a>
+                </div>
+                <div class="img_box">
+                    <img src="images/picture_002.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">Clothes Card</div>
+                    </a>
+                </div>
+                <div class="img_box">
+                    <img src="images/picture_003.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">
+                            Jersey Design</div>
+                    </a>
+                </div>
+                <div class="img_box show_desktop4">
+                    <img src="images/picture_004.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">Backetball Logos</div>
+                    </a>
+                </div>
+                <div class="img_box show_desktop4">
+                    <img src="images/picture_005.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">
+                            Mobile UI/UX</div>
+                    </a>
+                </div>
+                <div class="img_box show_desktop4">
+                    <img src="images/picture_006.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">Hot Pot DM</div>
+                    </a>
+                </div>
+                <div class="img_box show_desktop2">
+                    <img src="images/picture_007.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">UA Banner</div>
+                    </a>
+                </div>
+                <div class="img_box show_desktop2">
+                    <img src="images/picture_008.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">Animation</div>
+                    </a>
+                </div>
+                <div class="img_box show_desktop2">
+                    <img src="images/picture_009.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=N6MyEkZv3w0" class="overlay">
+                        <div class="text">Web</div>
+                    </a>
+                </div>
+
+                <a id="btn_op" class="btn show_desktop3" href="">more</a>
+
+            </div>
+            <a href="https://www.youtube.com/watch?v=jIzOIsQWMfg"></a>
+        </div>
+
+
+
+        <div id="re_bg04" class="bg04">
+
+
+            <a id="btn04" class="button04 show_desktop_nav">
+                <img src="images/right-arrow.svg" alt="">
+            </a>
+            <div id="left_title4" class="left_title4 left_title_pad4">
+                <h1>SERVICE</h1>
+                <p>服務事項。接案項目</p>
+            </div>
+            <div id="text_ctrl_all" class="text_ctrl_all text_ctrl_all_pad">
+                <h1 class="all_re">Service</h1>
+                <p> CIS Design / <span>企業識別系統設計</span></p>
+                <p>Graphic Design / <span>平面視覺設計</span></p>
+                <p>UI/UX Design / <span>使用者介面&經驗設計</span></p>
+                <p>Animation / <span>動畫製作</span></p>
+                <p>Video Editing / <span>影片剪輯製作</span></p>
+                <p>E-mail/ <span>sejasper507216@gmail.com</span></p>
+                <p class="bottom_text"> © 2019 JD.All Rights Reserved.</p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <span id="width" class="wid"></span>
+    <span id="height" class="hei"></span>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script>
+
+
+
+
+        // -------------------------------------
+
+
+
+        // -------------------------------------------------------
+        $("#btn01").click(function moveBtn01() {
+            $(".bg_ctrl").css("transform", "translate(-100%, 0px)");
+
+
+            // $("#bg_big02").css("transform", "translate(70%,0)");
+            $("#bg_big03").css("transform", "translate(70%,0)");
+
+            // $("#ctrl_bg02").addClass("fadeInLeft");
+
+        });
+        // ------
+        $("#btn02").click(function moveBtn02() {
+            $(".bg_ctrl").css("transform", "translate(-100%, -100vh)");
+
+            $("#bg_big03").css("transform", "translate(70%,12vh)");
+
+        });
+        // ---------
+        $("#btn03").click(function moveBtn03() {
+            $(".bg_ctrl").css("transform", "translate(0, -100vh)");
+
+            // $("#bg_big02").css("transform", "translate(-2%,0)");
+            $("#bg_big03").css("transform", "translate(-2%,12vh)");
+
+        });
+
+        // -------
+        $("#btn04").click(function moveBtn04() {
+            $(".bg_ctrl").css("transform", "translate(0, 0)");
+
+            $("#bg_big03").css("transform", "translate(-2%,-6vh)");
+
+        });
+
+
+
+        // --------------------------------------------------
+        $(document).ready(function () {
+            $(window).resize(function () {
+                var width = $(window).width();
+                $("#width").text(width);
+                console.log(width);
+
+
+                var height = $(window).height();
+                $("#height").text(height);
+                console.log(height);
+
+
+
+
+                if (width <= 1013) {
+                    $(".bg_ctrl").css("transform", "translate(0, 0)");
+                    $("#re_bg01").removeClass("bg01");
+                    $("#re_bg02").removeClass("bg02");
+                    $("#re_bg03").removeClass("bg03");
+                    $("#re_bg04").removeClass("bg04");
+                    $("#bg_ctrl").removeClass("bg_ctrl");
+                    $("#nav_ul_1").removeClass("nav_ul_1");
+                    // --------body-------
+                    $("#overflow_body").removeClass("overflow_body");
+                    //--中間大板--------
+                    // $("#bg_logo").removeClass("bg_logo");
+                    //  -------re-bg01----------
+                    // $("#repic_1").removeClass("pic_1");
+                    // $("#re_ctl_pic").removeClass("ctl_pic");
+                    // $("#three_text").removeClass("three_text");
+                    // $("#two_text").removeClass("two_text");
+                    //  -------re-bg02---------
+                    $("#left_title").removeClass("left_title2");
+                    $("#ctrl_bg02").removeClass("ctrl_bg02");
+                    $("#bg02_ctrl_h1").removeClass("bg02_ctrl_h1");
+                    $("#ctrl_h1-p").removeClass("ctrl_h1-p");
+                    // --------re-bg03----------
+                    $("#left_title3").removeClass("left_title3");
+                    $("#containter").removeClass("containter");
+                    // --------re-bg04-----------
+                    $("#left_title4").removeClass("left_title4");
+                    $("#text_ctrl_all").removeClass("text_ctrl_all");
+
+                    // -------------------------
+                } else if (width > 1013) {
+                    $("#bg_ctrl").addClass("bg_ctrl");
+                    $("#re_bg01").addClass("bg01");
+                    $("#re_bg02").addClass("bg02");
+                    $("#re_bg03").addClass("bg03");
+                    $("#re_bg04").addClass("bg04");
+                    $("#nav_ul_1").addClass("nav_ul_1");
+                    //  ---------body----------------
+                    $("#overflow_body").addClass("overflow_body");
+                    //--中間大板--------
+                    // $("#bg_logo").addClass("bg_logo");
+                    //  -------add-bg01----------
+                    // $("#repic_1").addClass("pic_1");
+                    // $("#re_ctl_pic").addClass("ctl_pic");
+                    // $("#three_text").addClass("three_text");
+                    // $("#two_text").addClass("two_text");
+
+                    // -----------add-bg02--------------
+                    $("#left_title").addClass("left_title2");
+                    $("#ctrl_bg02").addClass("ctrl_bg02");
+                    $("#bg02_ctrl_h1").addClass("bg02_ctrl_h1");
+                    $("#ctrl_h1-p").addClass("ctrl_h1-p");
+                    // -----------add-bg03--------------
+                    $("#left_title3").addClass("left_title3");
+                    $("#containter").addClass("containter");
+                    // -----------add-bg04-----
+                    $("#left_title4").addClass("left_title4");
+                    $("#text_ctrl_all").addClass("text_ctrl_all");
+
+
+
+                };
+
+            });
+        });
+        // ----------滑鼠滾輪事件-------------
+        $(document).ready(function () {
+        var n = 0;
+        $(window).mousewheel(function (mov) {
+            if (mov.deltaY == -1) {
+                if (n <= 8) {
+                    n++;
+                    if (n == 1 || n == 2) {
+                        $(".bg_ctrl").css("transform", "translate(-100%, 0px)");
+                        $("#bg_big03").css("transform", "translate(15vw,0)");
+                    } else if (n == 3 || n == 4) {
+                        $(".bg_ctrl").css("transform", "translate(-100%, -100vh)");
+                        $("#bg_big03").css("transform", "translate(15vw,12vh)");
+                    } else if (n == 5 || n == 6) {
+                        $(".bg_ctrl").css("transform", "translate(0, -100vh)");
+                        $("#bg_big03").css("transform", "translate(0,12vh)");
+                    } else if (n == 7 || n == 8) {
+                        $(".bg_ctrl").css("transform", "translate(0, 0)");
+                        $("#bg_big03").css("transform", "translate(0,0)");
+                    }else{
+                        n = 0;
+                    return;
+                    }
+
+                }
+            }else {
+            if (n >= 0) {
+                n--;
+                if ( n == 7 || n == 8) {
+                    $(".bg_ctrl").css("transform", "translate(0, 0)");
+                    $("#bg_big03").css("transform", "translate(0,-6vh)");
+                } else if (n == 5 || n == 6)  {
+                    $(".bg_ctrl").css("transform", "translate(0, -100vh)");
+                    $("#bg_big03").css("transform", "translate(0,12vh)");
+                } else if (n == 3 || n == 4) {
+                    $(".bg_ctrl").css("transform", "translate(-100%, -100vh)");
+                    $("#bg_big03").css("transform", "translate(15vw,12vh)");
+                } else if (n == 0 || n == 1 || n == 2) {
+                    $(".bg_ctrl").css("transform", "translate(-100%, 0px)");
+                    $("#bg_big03").css("transform", "translate(15vw,0)");
+                }else{
+                        n = 8;
+                    return;
+                    }
+            }
+            };
+            console.log(n)
+        });
+
+        });
+
+        // $(window).mousewheel(function (mov) {
+        //     if (mov.deltaY == -1) {                //mov.deltaY == -1表示滑鼠向下滾動
+        //         for (i = 1; i <= 4; i++) {
+        //             if (i == 1) {
+                      
+        //             } else if (i == 2) {
+                      
+        //             } else if (i == 3) {
+                     
+        //             } else if (i == 4) {
+                       
+        //             }
+        //         }
+            // } else {
+            //     for (i = 4; i >= 1; i--) {
+            //         if (i == 4) {
+
+            //         } else if (i == 3) {
+
+            //         } else if (i == 2) {
+
+            //         } else if (i == 1) {
+
+            //         }
+            //     }
+
+        //     }
+
+        //     console.log(i)
+        // });
+    </script>
+
+
+</body>
+
+</html>
